@@ -1,9 +1,9 @@
-# Skybin
+# Pubbin
 
 Decentralized text uploading website. This will upload the website to whatever portal is rendering the skapp.
 
 ### Dapp URL
-https://siasky.net/CAAVU14pB9GRIqCrejD7rlS27HltGGiiCLICzmrBV0wVtA
+https://scp.techandsupply.ca/CABITXmqRWrPaRNBfbywj4GhTuZ1miqyM7XpUHnox00fuQ
 
-### Skylink
-https://siasky.net/file/CAAVU14pB9GRIqCrejD7rlS27HltGGiiCLICzmrBV0wVtA
+### Publink
+https://scp.techandsupply.ca/file/CABITXmqRWrPaRNBfbywj4GhTuZ1miqyM7XpUHnox00fuQ
