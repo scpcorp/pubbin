@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <title>SkyBin | Decentralized Pastebin powered by Sia Skynet</title>
+  <title>Pubbin | Decentralized Pastebin powered by SiaPrime Public Portals</title>
 
   <script>
     function generateUUID() {
@@ -22,7 +22,7 @@
       button.classList.add("loading")
       var blob = new Blob(
         [
-          "<html><head><title>Welcome To Skybin</title><head><body><pre>" +
+          "<html><head><title>Welcome To Pubbin</title><head><body><pre>" +
           snippet +
           "</pre></body></html>"
         ],
@@ -32,7 +32,7 @@
       formData.append("file", blob)
 
       const uuid = generateUUID()
-      fetch(`/skynet/skyfile/${uuid}?filename=skybin.html`, {
+      fetch(`/publicaccess/pubfile/${uuid}?filename=pubbin.html`, {
         method: "POST",
         body: formData
       })
@@ -40,14 +40,14 @@
         .then(result => {
           button.classList.remove("loading")
           var newLink = document.createElement("a")
-          newLink.href = result.skylink
-          newLink.classList.add("skylink")
+          newLink.href = result.publink
+          newLink.classList.add("publink")
           newLink.setAttribute("target", "_blank")
           newLink.textContent =
-            "https://" + window.location.hostname + "/" + result.skylink
-          document.getElementById("skylinks").appendChild(newLink)
+            "https://" + window.location.hostname + "/" + result.publink
+          document.getElementById("publinks").appendChild(newLink)
           var linkBreak = document.createElement("br")
-          document.getElementById("skylinks").appendChild(linkBreak)
+          document.getElementById("publinks").appendChild(linkBreak)
         })
         .catch(error => {
           button.classList.remove("loading")
@@ -135,11 +135,11 @@
       cursor: not-allowed;
     }
 
-    #skylinks {
+    #publinks {
       padding-top: 40px;
     }
 
-    #skylinks>a {
+    #publinks>a {
       padding-top: 20px;
       display: block;
       color: #4a5568;
@@ -150,7 +150,7 @@
 
 <body>
   <div class="wrapper">
-    <h1>skybin</h1>
+    <h1>pubbin</h1>
     <span class="caps" style="font-size: 16px;">Pastebin, Decentralized &amp; Encrypted.</span>
 
     <div class="snippet-wrapper">
@@ -170,12 +170,12 @@
             </path>
           </g>
         </svg>
-        Generate Skynet Link
+        Generate Public Portals Link
       </button>
     </div>
-    <div id="skylinks"></div>
+    <div id="publinks"></div>
 
-    <span style="margin-top: auto;" class="caps">Powered by Sia Skynet</span>
+    <span style="margin-top: auto;" class="caps">Powered by SiaPrime PublicPortals</span>
   </div>
 </body>
 
